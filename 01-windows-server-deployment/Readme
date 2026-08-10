@@ -1,0 +1,87 @@
+# 🖥️ 01. Windows Server Deployment
+
+## 📌 Overview
+
+This lab demonstrates the deployment and initial configuration of **Windows Server** using **Oracle VirtualBox**.
+
+The objective was to build a Windows Server virtual machine and perform the basic configuration required before using the server for additional roles and services.
+
+## 🛠️ Lab Environment
+
+* **Virtualization:** Oracle VirtualBox
+* **Operating System:** Windows Server
+* **Network:** VirtualBox Virtual Network
+* **Server Type:** Virtual Machine
+
+## 🎯 Objectives
+
+* Install Windows Server
+* Create and configure a virtual machine
+* Allocate CPU and RAM resources
+* Configure the server hostname
+* Configure a static IP address
+* Review Windows Server system information
+* Use Server Manager
+* Perform basic server administration
+
+## 🔧 Skills Demonstrated
+
+* Windows Server installation
+* Virtual machine configuration
+* CPU and RAM allocation
+* Hostname configuration
+* Static IP configuration
+* Server Manager
+* Windows Server GUI
+* System information
+* Basic server administration
+
+## 📝 Lab Steps
+
+### 1. Created the Virtual Machine
+
+* Created a new virtual machine in Oracle VirtualBox.
+* Selected the Windows Server ISO as the installation media.
+* Allocated CPU and RAM resources.
+* Created and configured the virtual hard disk.
+* Configured the network adapter.
+
+### 2. Installed Windows Server
+
+* Booted the virtual machine using the Windows Server ISO.
+* Completed the Windows Server installation.
+* Selected the appropriate Windows Server installation option.
+* Created the initial administrator account.
+* Logged into Windows Server.
+
+### 3. Configured the Hostname
+
+* Opened the Windows Server system properties.
+* Changed the default computer name to a meaningful hostname.
+* Restarted the server to apply the hostname change.
+
+### 4. Configured a Static IP Address
+
+* Opened the network adapter settings.
+* Configured a static IPv4 address.
+* Configured the subnet mask.
+* Configured the default gateway.
+* Configured the preferred DNS server.
+* Verified the network configuration using Windows networking commands.
+
+### 5. Verified Server Configuration
+
+* Opened **Server Manager**.
+* Reviewed the server's configuration.
+* Verified the hostname.
+* Verified the network configuration.
+* Reviewed system information.
+* Confirmed that the server was operating correctly.
+
+
+## 💡 What I Learned
+
+Through this lab, I gained practical experience deploying a Windows Server virtual machine and performing the initial configuration required for a server environment.
+
+This lab also provided the foundation for later labs involving **Active Directory, DNS, DHCP, Group Policy, IIS, FTP, WSUS, PowerShell, and Windows networking**.
+
