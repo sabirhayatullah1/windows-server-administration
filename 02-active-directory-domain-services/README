@@ -1,1 +1,155 @@
+# 02. Active Directory Domain Services
 
+## Overview
+
+This lab demonstrates the deployment and configuration of **Active Directory Domain Services (AD DS)** in a Windows Server environment using **Oracle VirtualBox**.
+
+The lab includes creating a Domain Controller, configuring an Active Directory domain, creating Organizational Units and user accounts, managing security groups, joining a Windows client to the domain, and testing Active Directory functionality.
+
+## Lab Environment
+
+* Oracle VirtualBox
+* Windows Server
+* Windows Client
+* Active Directory Domain Services
+* Domain Controller
+* VirtualBox internal/lab network
+
+## Objectives
+
+* Install and configure Active Directory Domain Services
+* Promote Windows Server to a Domain Controller
+* Create an Active Directory domain
+* Create Organizational Units (OUs)
+* Create and manage user accounts
+* Create and manage security groups
+* Configure computer accounts
+* Join a Windows client computer to the domain
+* Manage Active Directory using administrative tools
+* Use PowerShell to manage Active Directory
+* Verify domain functionality
+
+## Skills Demonstrated
+
+* Active Directory Domain Services (AD DS)
+* Domain Controller deployment
+* Domain creation
+* Organizational Units (OUs)
+* User account management
+* Security groups
+* Computer accounts
+* Domain joining
+* Active Directory Users and Computers (ADUC)
+* Active Directory Administrative Center
+* Active Directory Sites and Services
+* Active Directory PowerShell
+* Group Policy
+
+## Lab Steps
+
+### 1. Install Active Directory Domain Services
+
+* Open Server Manager
+* Select **Add Roles and Features**
+* Install the **Active Directory Domain Services** role
+* Verify the AD DS role installation
+
+### 2. Promote the Server to a Domain Controller
+
+* Open the AD DS configuration wizard
+* Select **Add a new forest**
+* Create the Active Directory domain
+* Configure DNS settings
+* Configure the Directory Services Restore Mode (DSRM) password
+* Complete the Domain Controller promotion
+* Restart the server
+
+### 3. Verify the Domain Controller
+
+* Log into the newly created domain
+* Open Server Manager
+* Verify the AD DS role
+* Open Active Directory Users and Computers
+* Confirm that the domain was successfully created
+
+### 4. Create Organizational Units
+
+Create Organizational Units to organize users and computers within Active Directory.
+
+Example:
+
+```text
+Domain
+├── Users
+├── Computers
+├── IT
+├── HR
+├── Finance
+└── Management
+```
+
+### 5. Create User Accounts
+
+* Create test user accounts
+* Assign users to the appropriate Organizational Units
+* Configure usernames and passwords
+* Verify the accounts in Active Directory Users and Computers
+
+### 6. Create Security Groups
+
+* Create security groups for different departments
+* Add users to the appropriate security groups
+* Verify group membership
+* Test access based on group membership
+
+### 7. Configure Computer Accounts
+
+* Verify computer accounts in Active Directory
+* Organize computer accounts into the appropriate Organizational Units
+* Confirm that domain-joined computers appear in Active Directory
+
+### 8. Join a Windows Client to the Domain
+
+* Configure the client computer to use the Domain Controller as its DNS server
+* Open Windows System Properties
+* Select the option to join the computer to a domain
+* Enter the Active Directory domain name
+* Provide domain administrator credentials
+* Restart the client computer
+* Log into the client using a domain account
+
+### 9. Manage Active Directory
+
+The following administrative tools were used:
+
+* Active Directory Users and Computers
+* Active Directory Administrative Center
+* Active Directory Sites and Services
+* Server Manager
+* Active Directory PowerShell
+
+### 10. Test Active Directory
+
+Example commands used to verify the environment:
+
+```powershell
+whoami
+hostname
+ipconfig /all
+nslookup <your-domain>
+```
+
+PowerShell Active Directory commands:
+
+```powershell
+Get-ADUser -Filter *
+Get-ADComputer -Filter *
+Get-ADGroup -Filter *
+Get-ADOrganizationalUnit -Filter *
+```
+
+## What I Learned
+
+This lab provided hands-on experience building a functional **Active Directory domain environment** from the ground up.
+
+I learned how Active Directory relies on **DNS, networking, authentication, Organizational Units, security groups, and Group Policy** to manage users and computers in a Windows domain environment.
