@@ -1,19 +1,19 @@
-# 🖥️ 01. Windows Server Deployment
+# 01. Windows Server Deployment
 
-## 📌 Overview
+## Overview
 
 This lab demonstrates the deployment and initial configuration of **Windows Server** using **Oracle VirtualBox**.
 
 The objective was to build a Windows Server virtual machine and perform the basic configuration required before using the server for additional roles and services.
 
-## 🛠️ Lab Environment
+## Lab Environment
 
 * **Virtualization:** Oracle VirtualBox
 * **Operating System:** Windows Server
 * **Network:** VirtualBox Virtual Network
 * **Server Type:** Virtual Machine
 
-## 🎯 Objectives
+## Objectives
 
 * Install Windows Server
 * Create and configure a virtual machine
@@ -24,7 +24,7 @@ The objective was to build a Windows Server virtual machine and perform the basi
 * Use Server Manager
 * Perform basic server administration
 
-## 🔧 Skills Demonstrated
+## Skills Demonstrated
 
 * Windows Server installation
 * Virtual machine configuration
@@ -36,7 +36,7 @@ The objective was to build a Windows Server virtual machine and perform the basi
 * System information
 * Basic server administration
 
-## 📝 Lab Steps
+## Lab Steps
 
 ### 1. Created the Virtual Machine
 
@@ -79,7 +79,7 @@ The objective was to build a Windows Server virtual machine and perform the basi
 * Confirmed that the server was operating correctly.
 
 
-## 💡 What I Learned
+## What I Learned
 
 Through this lab, I gained practical experience deploying a Windows Server virtual machine and performing the initial configuration required for a server environment.
 
