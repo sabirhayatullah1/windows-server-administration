@@ -1,0 +1,156 @@
+# 04. Group Policy
+
+## Overview
+
+This lab demonstrates the configuration and management of **Group Policy** in a Windows Server Active Directory environment using **Oracle VirtualBox**.
+
+The lab focuses on creating and linking Group Policy Objects (GPOs), applying user and computer policies, configuring security settings, testing policy deployment, and troubleshooting Group Policy issues.
+
+## Lab Environment
+
+* Oracle VirtualBox
+* Windows Server
+* Windows Client
+* Active Directory Domain Services
+* Domain Controller
+* Group Policy Management
+* VirtualBox internal/lab network
+
+## Objectives
+
+* Access and configure Group Policy Management
+* Create Group Policy Objects (GPOs)
+* Link GPOs to Organizational Units
+* Configure computer policies
+* Configure user policies
+* Configure security settings
+* Apply and test Group Policy
+* Verify policy application on a client computer
+* Troubleshoot Group Policy issues
+
+## Skills Demonstrated
+
+* Group Policy Management
+* GPO creation
+* Organizational Units
+* Computer policies
+* User policies
+* Security configuration
+* Policy testing
+* Policy troubleshooting
+
+## Lab Steps
+
+### 1. Opened Group Policy Management
+
+* Opened Server Manager
+* Selected **Tools**
+* Opened **Group Policy Management**
+* Located the Active Directory domain
+* Reviewed the existing Organizational Units and Group Policy Objects
+
+### 2. Created a Group Policy Object
+
+* Selected the appropriate Organizational Unit
+* Created a new Group Policy Object
+* Assigned a descriptive name to the GPO
+* Opened the Group Policy Management Editor
+* Configured the required policy settings
+
+### 3. Configured Computer Policies
+
+Configured computer-based policies that apply to computers within the targeted Organizational Unit.
+
+Examples include:
+
+* Security settings
+* Windows configuration settings
+* System restrictions
+* Firewall-related settings
+* Control Panel restrictions
+
+### 4. Configured User Policies
+
+Configured user-based policies that apply to users within the targeted Organizational Unit.
+
+Examples include:
+
+* Desktop configuration
+* Control Panel restrictions
+* User interface settings
+* Security settings
+* Access restrictions
+
+### 5. Linked the GPO to an Organizational Unit
+
+* Selected the appropriate Organizational Unit
+* Linked the newly created GPO
+* Verified that the GPO appeared under the Organizational Unit
+* Confirmed that the policy was enabled
+
+### 6. Applied and Tested the Policy
+
+On the Windows client, used:
+
+```powershell
+gpupdate /force
+```
+
+Verified the applied policies using:
+
+```powershell
+gpresult /r
+```
+
+The client was then tested to confirm that the configured policy settings were successfully applied.
+
+### 7. Verified Group Policy Application
+
+* Logged into the Windows client using a domain account
+* Confirmed that the configured policy settings were applied
+* Verified the computer and user policies
+* Compared the client configuration before and after applying the GPO
+
+### 8. Troubleshot Group Policy
+
+Investigated common Group Policy issues, including:
+
+* GPO not applying
+* Incorrect Organizational Unit placement
+* Incorrect GPO linking
+* DNS configuration issues
+* Client not communicating with the Domain Controller
+* Policy refresh problems
+* User versus computer policy configuration issues
+
+Commands used for troubleshooting included:
+
+```powershell
+gpupdate /force
+gpresult /r
+whoami
+ipconfig /all
+```
+
+## Verification
+
+The following functionality was verified:
+
+* Group Policy Management successfully accessed
+* GPO successfully created
+* GPO successfully linked to an Organizational Unit
+* Computer policies successfully configured
+* User policies successfully configured
+* Policies successfully applied to the Windows client
+* Policy results successfully verified using `gpresult`
+* Group Policy successfully refreshed using `gpupdate`
+* Group Policy troubleshooting performed successfully
+
+## What I Learned
+
+This lab provided hands-on experience managing **Group Policy in an Active Directory environment**.
+
+I learned how GPOs are created, configured, and linked to Organizational Units, as well as how user and computer policies are applied to domain clients.
+
+I also learned how to use `gpupdate` and `gpresult` to refresh and verify Group Policy and troubleshoot common policy application issues.
+
