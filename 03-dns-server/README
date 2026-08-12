@@ -1,1 +1,164 @@
+# 03. DNS Server
+
+## Overview
+
+This lab demonstrates the installation, configuration, and administration of the **Domain Name System (DNS)** within a Windows Server environment using **Oracle VirtualBox**.
+
+The lab focuses on configuring DNS zones and records, testing name resolution, and troubleshooting common DNS issues.
+
+## Lab Environment
+
+* Oracle VirtualBox
+* Windows Server
+* Windows Client
+* DNS Server
+* Active Directory Domain Services
+* VirtualBox internal/lab network
+
+## Objectives
+
+* Install the DNS Server role
+* Configure DNS zones
+* Configure Forward Lookup Zones
+* Configure Reverse Lookup Zones
+* Create and manage DNS records
+* Test DNS name resolution
+* Use `nslookup` to troubleshoot DNS
+* Verify DNS connectivity between the client and server
+
+## Skills Demonstrated
+
+* DNS installation
+* DNS zones
+* Forward Lookup Zones
+* Reverse Lookup Zones
+* DNS records
+* Name resolution
+* DNS troubleshooting
+* `nslookup`
+
+## Lab Steps
+
+### 1. Installed the DNS Server Role
+
+* Opened Server Manager
+* Selected **Add Roles and Features**
+* Installed the **DNS Server** role
+* Verified that the DNS Server role was successfully installed
+* Opened **DNS Manager**
+
+### 2. Configured the Forward Lookup Zone
+
+* Opened DNS Manager
+* Located the Forward Lookup Zones section
+* Created or verified the forward lookup zone
+* Configured the DNS namespace
+* Verified that DNS records were available within the zone
+
+### 3. Configured DNS Records
+
+Created and managed DNS records used for name resolution.
+
+Records configured or verified included:
+
+* A records
+* CNAME records
+* NS records
+* SOA records
+* PTR records
+
+Example:
+
+```text
+Server01 → 192.168.1.10
+Client01 → 192.168.1.20
+```
+
+### 4. Configured the Reverse Lookup Zone
+
+* Opened DNS Manager
+* Created a Reverse Lookup Zone
+* Configured the appropriate network address
+* Created or verified PTR records
+* Tested reverse DNS resolution
+
+Example:
+
+```text
+192.168.1.10 → server01.yourdomain.local
+```
+
+### 5. Configured Client DNS Settings
+
+* Opened the client's network adapter settings
+* Configured the Domain Controller/DNS server as the preferred DNS server
+* Verified the DNS configuration using `ipconfig /all`
+* Confirmed that the client could communicate with the DNS server
+
+### 6. Tested DNS Name Resolution
+
+Used Windows networking commands to test DNS functionality.
+
+```powershell
+ipconfig /all
+nslookup yourdomain.local
+nslookup server01.yourdomain.local
+ping server01.yourdomain.local
+```
+
+### 7. Tested Reverse DNS Resolution
+
+Used `nslookup` to perform a reverse DNS lookup.
+
+```powershell
+nslookup 192.168.1.10
+```
+
+Verified that the IP address resolved to the expected hostname.
+
+## Verification
+
+The following DNS functionality was verified:
+
+* DNS Server role successfully installed
+* Forward Lookup Zone successfully configured
+* Reverse Lookup Zone successfully configured
+* DNS records successfully created and verified
+* Client DNS settings correctly configured
+* Forward name resolution successfully tested
+* Reverse name resolution successfully tested
+* DNS connectivity successfully verified using `nslookup`
+* DNS functionality verified between the Windows Server and client
+
+## Troubleshooting
+
+Common DNS issues investigated during the lab included:
+
+* Incorrect DNS server configuration
+* Incorrect client DNS settings
+* DNS name resolution failures
+* Missing DNS records
+* Incorrect IP addresses
+* Forward lookup failures
+* Reverse lookup failures
+* Network connectivity problems
+
+Commands used for troubleshooting included:
+
+```powershell
+ipconfig /all
+ipconfig /flushdns
+ipconfig /registerdns
+nslookup
+ping
+```
+
+## What I Learned
+
+This lab provided hands-on experience configuring and troubleshooting **DNS in a Windows Server environment**.
+
+I learned how DNS translates hostnames into IP addresses, how Forward and Reverse Lookup Zones work, how DNS records are managed, and how client computers rely on DNS for successful communication within a Windows domain.
+
+I also learned how to use tools such as **DNS Manager, `nslookup`, `ping`, and `ipconfig`** to identify and troubleshoot DNS-related problems.
+
 
