@@ -1,1 +1,163 @@
+# 05. IIS Web Server
+
+## Overview
+
+This lab demonstrates the installation, configuration, and management of **Internet Information Services (IIS)** on Windows Server.
+
+The objective was to deploy a functional web server, create a custom website, configure HTTP bindings and ports, manage the application pool, configure Windows Firewall, and test website connectivity from a client machine.
+
+## Lab Environment
+
+* Oracle VirtualBox
+* Windows Server
+* Windows Client
+* Internet Information Services (IIS)
+* Windows Firewall
+* HTTP / TCP
+* Active Directory environment
+
+## Objectives
+
+* Install the IIS Web Server role
+* Verify IIS Manager and IIS services
+* Create a custom website
+* Configure a website physical directory
+* Configure HTTP bindings
+* Configure TCP port 80
+* Configure an IIS Application Pool
+* Configure Windows Firewall
+* Test website access locally
+* Test website access from a client machine
+* Troubleshoot common IIS connectivity issues
+
+## IIS Installation
+
+IIS was installed using **Server Manager → Add Roles and Features**.
+
+The Web Server (IIS) role and required management tools were installed and verified.
+
+## Website Creation
+
+A custom website was created in IIS Manager.
+
+Example configuration:
+
+* **Website Name:** Test Website
+* **Physical Path:** `C:\inetpub\TestWebsite`
+* **Protocol:** HTTP
+* **Port:** 80
+* **IP Address:** Server IP address
+
+The website directory contains a custom `index.html` page used to verify that IIS is serving the website correctly.
+
+## HTTP and Port Configuration
+
+The website was configured to use the **HTTP protocol on TCP port 80**.
+
+IIS bindings determine how incoming requests are directed to a website. The binding can specify the protocol, IP address, port, and host name.
+
+Example:
+
+```text
+Type:     http
+IP:       Server IP Address
+Port:     80
+Hostname: Blank
+```
+
+
+## Application Pool
+
+The website was assigned to an IIS Application Pool.
+
+Application Pools provide isolation for IIS applications by grouping worker processes and allowing applications to run with their own configuration and process boundaries.
+
+Example:
+
+```text
+Application Pool: TestWebsitePool
+Pipeline Mode:    Integrated
+```
+
+
+## Windows Firewall Configuration
+
+Windows Firewall was configured to allow inbound HTTP traffic on **TCP port 80**.
+
+This allows client computers to connect to the IIS web server over HTTP.
+
+
+## Website Testing
+
+The website was tested locally from the Windows Server using:
+
+```text
+http://localhost
+```
+
+The website was then tested from the Windows client using the IIS server's IP address:
+
+```text
+http://SERVER-IP
+```
+
+Example:
+
+```text
+http://192.168.1.250
+```
+
+The custom IIS webpage successfully loaded from the client machine.
+
+
+## Connectivity Testing
+
+Network connectivity was verified using:
+
+```cmd
+ping SERVER-IP
+```
+
+HTTP connectivity was tested using a web browser.
+
+Example:
+
+```text
+Client → IIS Server
+        ↓
+   TCP Port 80
+        ↓
+     IIS Website
+```
+
+## Troubleshooting
+
+The following troubleshooting steps were used when testing IIS:
+
+1. Verified that the IIS website was started.
+2. Verified that the **World Wide Web Publishing Service (W3SVC)** was running.
+3. Checked the website's physical path.
+4. Verified that the `index.html` file existed.
+5. Checked the IIS HTTP binding.
+6. Verified that TCP port 80 was allowed through Windows Firewall.
+7. Tested connectivity between the client and server.
+8. Tested the website using both `localhost` and the server IP address.
+
+## Skills Demonstrated
+
+* Windows Server administration
+* IIS installation and configuration
+* Website deployment
+* HTTP
+* TCP ports
+* IIS bindings
+* Application Pools
+* Windows Firewall
+* Network connectivity testing
+* Website troubleshooting
+* Client/server testing
+
+## Result
+
+A functional IIS web server was successfully deployed on Windows Server. A custom website was created, configured for HTTP on TCP port 80, assigned to an application pool, and tested successfully from both the server and a Windows client.
 
