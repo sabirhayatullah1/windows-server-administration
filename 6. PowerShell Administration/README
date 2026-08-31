@@ -1,0 +1,29 @@
+# 06. PowerShell Administration
+
+This lab demonstrates using **PowerShell** to perform common Windows Server administration and automation tasks.
+
+**Repository:** `powershell-administration`
+
+## Tasks Completed
+
+* PowerShell commands and scripting
+* File and directory management
+* Active Directory user management
+* Windows service management
+* System information
+* Network troubleshooting
+* Basic automation
+
+## Skills Demonstrated
+
+* PowerShell
+* Windows Server Administration
+* Active Directory
+* File System Management
+* Service Management
+* Networking
+* Automation
+
+## Result
+
+Successfully used PowerShell to manage Windows Server resources, Active Directory, services, networking, and automated administrative tasks.
