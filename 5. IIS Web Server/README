@@ -27,7 +27,6 @@ The objective was to deploy a functional web server, create a custom website, co
 * Configure an IIS Application Pool
 * Configure Windows Firewall
 * Test website access locally
-* Test website access from a client machine
 * Troubleshoot common IIS connectivity issues
 
 ## IIS Installation
@@ -93,41 +92,6 @@ The website was tested locally from the Windows Server using:
 
 ```text
 http://localhost
-```
-
-The website was then tested from the Windows client using the IIS server's IP address:
-
-```text
-http://SERVER-IP
-```
-
-Example:
-
-```text
-http://192.168.1.250
-```
-
-The custom IIS webpage successfully loaded from the client machine.
-
-
-## Connectivity Testing
-
-Network connectivity was verified using:
-
-```cmd
-ping SERVER-IP
-```
-
-HTTP connectivity was tested using a web browser.
-
-Example:
-
-```text
-Client → IIS Server
-        ↓
-   TCP Port 80
-        ↓
-     IIS Website
 ```
 
 ## Troubleshooting
